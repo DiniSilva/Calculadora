@@ -1,0 +1,101 @@
+﻿@{
+   ViewData["Title"] = "Calculadora";
+}
+
+<div class="text-center">
+   <h1 class="display-4">Calculadora</h1>
+   <h4>Exemplificação da interação entre o <i>Cliente</i> e o <i>Servidor</i>.</h4>
+</div>
+
+<form method="post">
+        <!--esta linha de comentário (HTML) vai ser vsita no browser-->
+        @*mas, esta já não será exportada para o browser*@
+
+        <input type="hidden" name="primeiroOperando" value="@ViewBag.PrimeiroOperando" />
+        <input type="hidden" name="operador" value="@ViewBag.Operando" />
+        <input type="hidden" name="limpaEcra" value="@ViewBag.limpaEcra" />
+
+  <table border="0"
+          style="border-spacing:3px;
+                 border-collapse:collapse;
+                 border: 1px solid #808080;
+                 margin-left:auto;
+                 margin-right:auto;">
+      <tr>
+         <td colspan="4">
+            <input type="text"
+                   name="visor"
+                   value="@ViewBag.Visor"
+                   readonly="readonly"
+                   style="text-align:right;
+                          width:167px;"
+                   class="form-control" />
+         </td>
+      </tr>
+      <tr>
+         <td colspan="2">
+            <input type="submit" value="C" name="botao" class="btn btn-outline-danger" style="height:40px;width:82px;" />
+         </td>
+         <td>
+            <input type="submit" value="+/-" name="botao" class="btn btn-outline-info" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value=":" name="botao" class="btn btn-outline-secondary" style="height:40px;width:40px;" />
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type="submit" value="7" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="8" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="9" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="x" name="botao" class="btn btn-outline-secondary" style="height:40px;width:40px;" />
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type="submit" value="4" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="5" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="6" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="-" name="botao" class="btn btn-outline-secondary" style="height:40px;width:40px;" />
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type="submit" value="1" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="2" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="3" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="+" name="botao" class="btn btn-outline-secondary" style="height:40px;width:40px;" />
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type="submit" value="0" name="botao" class="btn btn-outline-primary" style="height:40px;width:40px;" />
+         </td>
+         <td>
+            <input type="submit" value="," name="botao" class="btn btn-outline-info" style="height:40px;width:40px;" />
+         </td>
+         <td colspan="2">
+            <input type="submit" value="=" name="botao" class="btn btn-outline-secondary" style="height:40px;width:83px;" />
+         </td>
+      </tr>
+   </table>
+</form>
+
